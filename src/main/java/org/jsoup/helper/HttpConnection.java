@@ -1302,7 +1302,7 @@ public class HttpConnection implements Connection {
         }
 
         public KeyVal inputStream(InputStream inputStream) {
-            Validate.notNullParam(value, "inputStream");
+            Validate.notNullParam(inputStream, "inputStream");
             this.stream = inputStream;
             return this;
         }
