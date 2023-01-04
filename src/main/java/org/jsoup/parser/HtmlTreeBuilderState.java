@@ -368,7 +368,7 @@ enum HtmlTreeBuilderState {
                     // otherwise, merge attributes onto real html (if present)
                     stack = tb.getStack();
                     if (stack.size() > 0) {
-                        Element html = tb.getStack().get(0);
+                        Element html = stack.get(0);
                         if (startTag.hasAttributes()) {
                             for (Attribute attribute : startTag.attributes) {
                                 if (!html.hasAttr(attribute.getKey()))
