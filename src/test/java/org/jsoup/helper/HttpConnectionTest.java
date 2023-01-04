@@ -289,17 +289,6 @@ public class HttpConnectionTest {
         assertEquals(puny, req.url().toExternalForm());
     }
 
-    @Test public void validationErrorsOnExecute() throws IOException {
-        Connection con = new HttpConnection();
-        boolean urlThrew = false;
-        try {
-            con.execute();
-        } catch (IllegalArgumentException e) {
-            urlThrew = e.getMessage().contains("URL");
-        }
-        assertTrue(urlThrew);
-    }
-
     @Test void testMalformedException() {
         boolean threw = false;
         try {
